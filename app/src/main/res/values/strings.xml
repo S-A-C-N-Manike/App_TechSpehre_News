@@ -1,4 +1,18 @@
 <resources>
+    <!-- App Name & Splash -->
     <string name="app_name">TechSphere News App</string>
     <string name="splash_screen">Splash screen image</string>
+
+    <!-- Sign In Screen -->
+    <string name="login_heading">Your digital connection\nto the university starts here</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="signup_prompt">Don’t have an account?</string>
+    <string name="signup_link">Sign up</string>
+    <string name="legal_text">By clicking continue, you agree to our Terms of Service\nand Privacy Policy</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_empty_fields">Please enter username and password</string>
+    <string name="toast_login_success">Logged in successfully</string>
 </resources>
