@@ -23,6 +23,7 @@
             android:name=".SignInScreen"
             android:exported="true" />
         <activity android:name=".SignInScreen" android:exported="true" />
+        <activity android:name=".SignUpScreen" android:exported="true"/>
     </application>
 
 
