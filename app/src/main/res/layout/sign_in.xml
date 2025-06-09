@@ -4,18 +4,25 @@
     android:layout_height="match_parent"
     android:background="@drawable/bggradient">
 
-    <!-- Background Rectangle Layer -->
+    <!-- Decorative Background Layer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="406dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bggradient"
+        android:clipToOutline="true" />
+
+    <!-- Bottom Background -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#B2D3FE"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="412dp"
         android:layout_gravity="bottom"
+        android:background="#B2D3FE"
+        android:layout_marginTop="350dp"
         android:backgroundTint="#B2D3FE"
         android:clipToOutline="true" />
 
-    <!-- Foreground content -->
+    <!-- Foreground UI -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,24 +36,24 @@
             android:gravity="center_horizontal">
 
             <!-- Logo -->
-
-            <!-- Slogan -->
             <ImageView
                 android:id="@+id/logoImage"
                 android:layout_width="285dp"
                 android:layout_height="241dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="16dp"
                 android:src="@drawable/logo" />
 
+            <!-- Heading Text -->
             <TextView
+                android:id="@+id/loginHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your digital connection\nto the university starts here"
-                android:textColor="#FFFFFF"
                 android:textAlignment="center"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="100dp" />
+                android:layout_marginBottom="40dp" />
 
             <!-- Username Field -->
             <LinearLayout
@@ -55,7 +62,8 @@
                 android:orientation="horizontal"
                 android:background="@drawable/edit_text_bg"
                 android:padding="12dp"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="50dp">
 
                 <ImageView
                     android:layout_width="24dp"
@@ -82,7 +90,7 @@
                 android:orientation="horizontal"
                 android:background="@drawable/edit_text_bg"
                 android:padding="12dp"
-                android:layout_marginBottom="60dp">
+                android:layout_marginBottom="32dp">
 
                 <ImageView
                     android:layout_width="24dp"
@@ -103,17 +111,19 @@
             </LinearLayout>
 
             <!-- Login Button -->
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/loginButton"
-                android:layout_width="300dp"
-                android:layout_height="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textAllCaps="false"
                 android:text="Login"
+                android:textSize="20sp"
                 android:textColor="#FFFFFF"
-                android:textSize="25sp"
                 android:background="@drawable/login_button_bg"
-                android:layout_marginBottom="55dp" />
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="10dp" />
 
-            <!-- Sign-up Prompt -->
+            <!-- Sign-up Text -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -131,14 +141,16 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Legal Terms -->
+            <!-- Legal Terms Text -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="By clicking continue, you agree to our Terms of Service\nand Privacy Policy"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

@@ -9,7 +9,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_TechSpehre_News">
 
-        <!-- ✅ All activities go inside <application> -->
         <activity
             android:name=".SplashScreen"
             android:exported="true">
@@ -19,12 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".SignInScreen"
-            android:exported="true" />
-        <activity android:name=".SignInScreen" android:exported="true" />
+        <activity android:name=".SignInScreen" android:exported="true"/>
         <activity android:name=".SignUpScreen" android:exported="true"/>
     </application>
-
-
 </manifest>
