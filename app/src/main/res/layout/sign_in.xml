@@ -32,8 +32,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <!-- Logo -->
             <ImageView
@@ -48,109 +48,110 @@
                 android:id="@+id/loginHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
                 android:text="Your digital connection\nto the university starts here"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="40dp" />
+                android:textStyle="bold" />
 
             <!-- Username Field -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/edit_text_bg"
-                android:padding="12dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="16dp"
-                android:layout_marginTop="50dp">
+                android:background="@drawable/edit_text_bg"
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/usericon"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="8dp" />
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/usericon" />
 
                 <EditText
                     android:id="@+id/usernameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Username"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
                     android:background="@android:color/transparent"
-                    android:inputType="text" />
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <!-- Password Field -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginBottom="32dp"
                 android:background="@drawable/edit_text_bg"
-                android:padding="12dp"
-                android:layout_marginBottom="32dp">
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/lockiconn"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="8dp" />
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/lockiconn" />
 
                 <EditText
                     android:id="@+id/passwordEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
                     android:hint="Password"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
                     android:inputType="textPassword"
-                    android:background="@android:color/transparent" />
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <!-- Login Button -->
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/loginButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:textAllCaps="false"
-                android:text="Login"
-                android:textSize="20sp"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/login_button_bg"
-                android:layout_marginBottom="60dp"
-                android:layout_marginTop="10dp" />
 
             <!-- Sign-up Text -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginButton"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/login_button_bg"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Don’t have an account?"
                 android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/signupLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:text="Sign up"
                 android:textColor="#050E76"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginBottom="16dp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <!-- Legal Terms Text -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:text="By clicking continue, you agree to our Terms of Service\nand Privacy Policy"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="12sp"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_marginBottom="60dp"
+                android:textSize="14sp" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
