@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "544805333239",
+    "project_id": "newaapptechsphere",
+    "storage_bucket": "newaapptechsphere.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544805333239:android:5ad94f9a3d0bfc37314bf2",
+        "android_client_info": {
+          "package_name": "com.example.app_techspehre_news"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp0bupbpKbi0jgzBRsGtqER_m3zP9NvVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

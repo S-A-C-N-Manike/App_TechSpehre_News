@@ -1,9 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- App Name & Splash -->
+
+    <!-- App Info -->
     <string name="app_name">TechSphere News App</string>
     <string name="splash_screen">Splash screen image</string>
 
-    <!-- Sign In Screen -->
+    <!-- Sign-In Screen -->
     <string name="login_heading">Your digital connection\nto the university starts here</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
@@ -12,7 +14,21 @@
     <string name="signup_link">Sign up</string>
     <string name="legal_text">By clicking continue, you agree to our Terms of Service\nand Privacy Policy</string>
 
+    <!-- Sign-Up Screen -->
+    <string name="hint_email">Email</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="button_signup">Sign Up</string>
+    <string name="login_prompt">Already have an account?</string>
+    <string name="login_link">Login</string>
+
     <!-- Toast Messages -->
-    <string name="toast_empty_fields">Please enter username and password</string>
-    <string name="toast_login_success">Logged in successfully</string>
+    <string name="toast_empty_fields">Please fill all fields</string>
+    <string name="toast_password_mismatch">Passwords do not match</string>
+    <string name="toast_invalid_password">Password must be 8+ characters with uppercase, lowercase, number , symbol</string>
+    <string name="toast_signup_success">Account created successfully</string>
+    <string name="toast_login_success">Login successful</string>
+    <string name="toast_user_not_found">User not found</string>
+    <string name="toast_incorrect_password">Incorrect password</string>
+    <string name="toast_database_error">Database error occurred</string>
+
 </resources>
