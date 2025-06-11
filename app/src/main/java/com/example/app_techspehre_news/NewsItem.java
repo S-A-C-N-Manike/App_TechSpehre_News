@@ -6,7 +6,7 @@ public class NewsItem {
     public String imageUrl;
     public String category;
 
-    public NewsItem() {} // Required for Firebase
+    public NewsItem() {} // required for Firebase
 
     public NewsItem(String title, String description, String imageUrl, String category) {
         this.title = title;

@@ -1,6 +1,7 @@
 package com.example.app_techspehre_news;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,8 +36,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
         NewsItem item = newsList.get(position);
         holder.titleText.setText(item.title);
-        holder.descText.setText(item.description);
         Glide.with(context).load(item.imageUrl).into(holder.thumbnail);
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, NewsViewScreen.class);
+            intent.putExtra("title", item.title);
+            intent.putExtra("description", item.description); // still passed
+            intent.putExtra("imageUrl", item.imageUrl);
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -45,13 +53,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     }
 
     public static class NewsViewHolder extends RecyclerView.ViewHolder {
-        TextView titleText, descText;
+        TextView titleText;
         ImageView thumbnail;
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
             titleText = itemView.findViewById(R.id.newsTitle);
-            descText = itemView.findViewById(R.id.newsDescription);
             thumbnail = itemView.findViewById(R.id.newsImage);
         }
     }

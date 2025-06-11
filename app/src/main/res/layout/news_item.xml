@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:src="@drawable/placeholder">
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/newsImage"
@@ -30,14 +29,5 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp" />
-
-        <TextView
-            android:id="@+id/newsDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description of the news..."
-            android:textColor="#444444"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
