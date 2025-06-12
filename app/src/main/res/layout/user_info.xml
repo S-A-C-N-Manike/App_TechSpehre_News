@@ -110,7 +110,7 @@
                 android:background="@drawable/exit_button_rounded"
                 android:text="Sign Up"
                 android:textAllCaps="false"
-                android:textColor="#FFFF"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
