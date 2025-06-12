@@ -40,14 +40,14 @@ public class NewsViewScreen extends AppCompatActivity {
             newsImage.setImageResource(R.drawable.placeholder);
         }
 
-        // 🔙 Navigate back to NewsScreen
+        // Navigate back to NewsScreen
         backButton.setOnClickListener(v -> {
             Intent backIntent = new Intent(NewsViewScreen.this, NewsScreen.class);
             startActivity(backIntent);
             finish();
         });
 
-        // 👤 Navigate to Profile Screen
+        // Navigate to Profile Screen
         //profileButton.setOnClickListener(v -> {
            // Intent profileIntent = new Intent(NewsViewScreen.this, UserProfileScreen.class);
             //startActivity(profileIntent);
