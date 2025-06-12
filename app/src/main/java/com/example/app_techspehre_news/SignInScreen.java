@@ -18,19 +18,19 @@ public class SignInScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_in); // Must match your XML layout file
+        setContentView(R.layout.sign_in); // Ensure this matches your XML filename
 
-        // Link UI elements with XML IDs
+        // Link UI elements
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
         signupLink = findViewById(R.id.signupLink);
 
-        // Initialize Firebase reference
+        // Firebase reference
         dbRef = FirebaseDatabase.getInstance("https://newstechsphere-default-rtdb.firebaseio.com/")
                 .getReference("users");
 
-        // Login button listener
+        // Login logic
         loginButton.setOnClickListener(v -> {
             String username = usernameEditText.getText().toString().trim();
             String password = passwordEditText.getText().toString().trim();
@@ -40,7 +40,6 @@ public class SignInScreen extends AppCompatActivity {
                 return;
             }
 
-            // Fetch password from Firebase for this username
             dbRef.child(username).child("password").addListenerForSingleValueEvent(
                     new ValueEventListener() {
                         @Override
@@ -51,10 +50,10 @@ public class SignInScreen extends AppCompatActivity {
                                 if (password.equals(storedPassword)) {
                                     Toast.makeText(SignInScreen.this, "Login successful!", Toast.LENGTH_SHORT).show();
 
-                                    // ✅ Navigate to NewsScreen after login
                                     Intent intent = new Intent(SignInScreen.this, NewsScreen.class);
+                                    intent.putExtra("username", username);
                                     startActivity(intent);
-                                    finish(); // Optional: prevents returning to login screen
+                                    finish();
                                 } else {
                                     Toast.makeText(SignInScreen.this, "Incorrect password", Toast.LENGTH_SHORT).show();
                                 }
@@ -70,7 +69,7 @@ public class SignInScreen extends AppCompatActivity {
                     });
         });
 
-        // Sign up link redirect
+        // Sign up redirection
         signupLink.setOnClickListener(v -> {
             startActivity(new Intent(SignInScreen.this, SignUpScreen.class));
         });
