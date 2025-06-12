@@ -20,7 +20,7 @@
                 android:layout_width="285dp"
                 android:layout_height="241dp"
                 android:src="@drawable/logo"
-                android:layout_marginBottom="75dp" />
+                android:layout_marginBottom="60dp" />
 
             <!-- Username Field -->
             <LinearLayout
@@ -131,7 +131,7 @@
                 android:textSize="18sp"
                 android:textColor="#FFFFFF"
                 android:textAllCaps="false"
-                android:layout_marginBottom="80dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/login_button_bg" />
 
             <!-- Login Redirect -->

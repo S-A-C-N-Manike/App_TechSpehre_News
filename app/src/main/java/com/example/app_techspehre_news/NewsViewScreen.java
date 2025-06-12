@@ -22,7 +22,7 @@ public class NewsViewScreen extends AppCompatActivity {
         newsDescription = findViewById(R.id.newsDescription);
         newsImage = findViewById(R.id.newsImage);
         backButton = findViewById(R.id.backButton);
-        profileButton = findViewById(R.id.profileButton);
+       // profileButton = findViewById(R.id.profileButton);
 
         // Get data passed from NewsAdapter
         Intent intent = getIntent();
@@ -48,9 +48,9 @@ public class NewsViewScreen extends AppCompatActivity {
         });
 
         // 👤 Navigate to Profile Screen
-        profileButton.setOnClickListener(v -> {
-            Intent profileIntent = new Intent(NewsViewScreen.this, UserProfileScreen.class);
-            startActivity(profileIntent);
-        });
+        //profileButton.setOnClickListener(v -> {
+           // Intent profileIntent = new Intent(NewsViewScreen.this, UserProfileScreen.class);
+            //startActivity(profileIntent);
+       // });
     }
 }

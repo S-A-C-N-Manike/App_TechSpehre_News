@@ -19,7 +19,7 @@
         <!-- Back Button -->
         <ImageButton
             android:id="@+id/backButton"
-            android:layout_width="45dp"
+            android:layout_width="0dp"
             android:layout_height="45dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
@@ -40,18 +40,18 @@
             android:scaleType="fitCenter"
             android:src="@drawable/logo" />
 
-        <ImageButton
-            android:id="@+id/profileButton"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:contentDescription="Profile"
-            android:scaleType="centerInside"
-            android:src="@drawable/user1" />
-    </LinearLayout>
+    <!-- <ImageButton
+       android:id="@+id/profileButton"
+       android:layout_width="45dp"
+       android:layout_height="45dp"
+       android:layout_weight="1"
+       android:background="@android:color/transparent"
+       android:contentDescription="Profile"
+       android:scaleType="centerInside"
+       android:src="@drawable/user1" />-->
+</LinearLayout>
 
-    <!-- News Details Scrollable Content -->
+<!-- News Details Scrollable Content -->
     <ScrollView
         android:id="@+id/newsScroll"
         android:layout_below="@id/topHeader"
