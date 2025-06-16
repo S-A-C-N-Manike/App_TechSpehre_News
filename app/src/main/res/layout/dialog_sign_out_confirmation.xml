@@ -30,7 +30,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnYesSignOut"
-            android:layout_width="100dp"
+
             android:layout_height="57dp"
             android:text="Yes"
             android:textSize="18sp"
@@ -41,7 +41,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnNoSignOut"
-            android:layout_width="100dp"
+
             android:layout_height="57dp"
             android:text="No"
             android:textSize="18sp"

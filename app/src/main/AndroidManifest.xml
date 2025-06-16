@@ -18,14 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".SignInScreen" android:exported="true"/>
         <activity android:name=".SignUpScreen" android:exported="true"/>
         <activity android:name=".NewsDetailScreen" android:exported="false" />
         <activity android:name=".NewsScreen" android:exported="true"/>
         <activity android:name=".NewsViewScreen" android:exported="true"/>
-        <activity android:name=".UserProfileScreen" android:exported="true"/>
         <activity android:name=".DevInfoScreen" android:exported="true" />
+        <activity android:name=".UserProfileScreen" android:exported="true" />
+        <activity android:name=".UserProfileScreen" android:exported="true" />
 
     </application>
 </manifest>

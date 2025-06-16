@@ -51,7 +51,7 @@ public class SignInScreen extends AppCompatActivity {
                                     Toast.makeText(SignInScreen.this, "Login successful!", Toast.LENGTH_SHORT).show();
 
                                     Intent intent = new Intent(SignInScreen.this, NewsScreen.class);
-                                    intent.putExtra("username", username);
+                                    intent.putExtra("username", username); // ✅ Pass logged-in username
                                     startActivity(intent);
                                     finish();
                                 } else {
