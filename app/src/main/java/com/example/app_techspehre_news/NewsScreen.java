@@ -38,10 +38,10 @@ public class NewsScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_screen);
 
-        // ✅ Retrieve username from intent
+        //  Retrieve username from intent
         loggedInUsername = getIntent().getStringExtra("username");
 
-        // 🧩 Link UI components
+        //  Link UI components
         newsRecyclerView = findViewById(R.id.newsRecyclerView);
         searchBar = findViewById(R.id.searchBar);
         btnAcademics = findViewById(R.id.btnAcademics);
@@ -50,12 +50,12 @@ public class NewsScreen extends AppCompatActivity {
         btnInfo = findViewById(R.id.btnInfo);
         btnProfile = findViewById(R.id.btnProfile);
 
-        // 🧩 RecyclerView setup
+        // RecyclerView setup
         newsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new NewsAdapter(filteredList, this);
         newsRecyclerView.setAdapter(adapter);
 
-        // 🌐 Load news from Firebase
+        // Load news from Firebase
         dbRef = FirebaseDatabase.getInstance("https://newstechsphere-default-rtdb.firebaseio.com/")
                 .getReference("news");
 
@@ -80,7 +80,7 @@ public class NewsScreen extends AppCompatActivity {
             }
         });
 
-        // 🔍 Search functionality
+        //  Search functionality
         searchBar.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -89,17 +89,18 @@ public class NewsScreen extends AppCompatActivity {
             @Override public void afterTextChanged(Editable s) {}
         });
 
-        // 🏷️ Filter by category
+        //  Filter by category
         btnAcademics.setOnClickListener(v -> filterByCategory("Academics"));
         btnSports.setOnClickListener(v -> filterByCategory("Sports"));
         btnEvents.setOnClickListener(v -> filterByCategory("Events"));
 
-        // 🧑‍💻 Navigate to Developer Info screen
+        //  Navigate to Developer Info screen
         btnInfo.setOnClickListener(v -> {
-            startActivity(new Intent(NewsScreen.this, DevInfoScreen.class));
+            Intent intent = new Intent(NewsScreen.this, DevInfoScreen.class);
+            startActivity(intent);
         });
 
-        // 👤 Navigate to User Profile screen with username
+        //  Navigate to User Profile screen with username
         btnProfile.setOnClickListener(v -> {
             if (loggedInUsername != null && !loggedInUsername.isEmpty()) {
                 Intent intent = new Intent(NewsScreen.this, UserProfileScreen.class);
@@ -111,7 +112,7 @@ public class NewsScreen extends AppCompatActivity {
         });
     }
 
-    // 🔍 Filter news by search
+    //  Filter news by search
     private void filterBySearch(String query) {
         filteredList.clear();
         for (NewsItem item : fullList) {
